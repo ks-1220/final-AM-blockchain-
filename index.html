@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Encrypted File Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🔐 Time-Locked File Vault</h1>
+  <h2>ETERNAL ECHO</h2>
+
+  <button id="connectWallet">Connect MetaMask</button>
+  <p id="walletAddress">Wallet: Not connected</p>
+
+  <div class="upload-section">
+    <input type="file" id="fileInput" >
+    <input type="datetime-local" id="unlockTime">
+    <button id="lockFile">Lock File</button>
+  </div>
+
+  <div id="timer"></div>
+  <div id="notification" class="notification"></div>
+
+
+  <div class="retrieve-section">
+    <button id="retrieveFile">Retrieve File</button>
+    <p id="result"></p>
+  </div>  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+  <!--script src="https://unpkg.com/nft.storage/dist/bundle.umd.min.js"></script-->
+  <!-- Add this inside your <head> or right before your main <script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script type="module" src="try.js"></script>
+  
+
+</body>
+</html>

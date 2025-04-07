@@ -1,27 +1,9 @@
-const PINATA_API_KEY = 'a456c69f1da325f277a8';
-const PINATA_SECRET_API_KEY = 'b75da41611e039df09c13d3789b862ed8dfae4280a0737734f505d009f5e822e';
-const CONTRACT_ADDRESS = '0x7Fb86B4e7fE2cc358a734Cd4F9cD29D3f596a88a';
+const PINATA_API_KEY = 'b1b93ede6ce2ab6cff48';
+const PINATA_SECRET_API_KEY = '02e04592d936c067bc6a7f414af17e698df2eb85dfbfe147ca6ab8b6a16c5551';
+const CONTRACT_ADDRESS = '0x8A7c2E30b9333e1Cc1D12d8fC828214621dCf112';
 
 
-const ABI = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_cid",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_unlockTime",
-				"type": "uint256"
-			}
-		],
-		"name": "lockFile",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
+const ABI =[
 	{
 		"inputs": [
 			{
@@ -66,6 +48,24 @@ const ABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_cid",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_unlockTime",
+				"type": "uint256"
+			}
+		],
+		"name": "lockFile",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "retrieveFile",
 		"outputs": [
@@ -78,8 +78,7 @@ const ABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
-
+]
 let web3, contract, account;
 
 document.getElementById("connectWallet").onclick = async () => {
